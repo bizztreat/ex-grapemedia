@@ -1,0 +1,20 @@
+{
+    "parameters": {
+        "username": "",
+        "#password": "",
+        "date_type": "incremental",
+        "increment": 1,
+        "date_start": "2020-01-01",
+        "date_end": "2020-02-01",
+        "categories": [
+            "ssp",
+            "sklik",
+            "adform",
+            "adform2",
+            "criteo",
+            "google",
+            "nativeads",
+            "nativeads2"
+        ]
+    }
+}
