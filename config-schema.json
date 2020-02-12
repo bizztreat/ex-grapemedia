@@ -1,0 +1,68 @@
+{
+    "title": "GrapeMedia Extractor",
+    "type": "object",
+    "required": [
+        "username",
+        "#password",
+        "date_type",
+        "increment",
+        "date_start",
+        "date_end",
+        "categories"
+    ],
+    "properties": {
+        "username": {
+            "title": "Username",
+            "type": "string",
+            "description": "Grape username",
+            "propertyOrder": 1
+        },
+        "#password": {
+            "title": "Password",
+            "type": "string",
+            "description": "Grape password",
+            "propertyOrder": 2
+        },
+        "date_type": {
+            "type": "string",
+            "title": "Date type",
+            "default": "incremental",
+            "enum": [
+                "incremental",
+                "fixed"
+            ],
+            "propertyOrder": 3
+        },
+        "increment": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 31,
+            "default": 7,
+            "title": "Increment",
+            "description": "Number of days to increment (only applicable with Date type = incremental",
+            "propertyOrder": 4
+        },
+        "date_start": {
+            "type": "string",
+            "format": "alt-date",
+            "title": "Start date",
+            "description": "Eldest date to download data since (only applicable with Date type = fixed)",
+            "propertyOrder": 5
+        },
+        "date_end": {
+            "type": "string",
+            "format": "alt-date",
+            "title": "End date",
+            "description": "Latest date to download data to (only applicable with Date type = fixed)",
+            "propertyOrder": 6
+        },
+        "categories": {
+            "type": "array",
+            "title": "Categories",
+            "items": {
+                "type": "string"
+            },
+            "propertyOrder": 7
+        }
+    }
+}
