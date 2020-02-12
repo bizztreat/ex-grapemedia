@@ -164,7 +164,7 @@ def main():
     """Fire-up main function"""
     aparser = ArgumentParser()
     aparser.add_argument(
-        "--config", default="/config/config.json", help="Configuration file path")
+        "--config", default="/data/config.json", help="Configuration file path")
     aparser.add_argument("--debug", default=False,
                          action="store_true", help="Run in high-verbosity mode")
     args = aparser.parse_args(sys.argv[1:])
