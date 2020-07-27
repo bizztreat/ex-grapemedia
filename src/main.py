@@ -220,7 +220,9 @@ def main():
             if not category in available_units:
                 available_units[category] = unit_ids
             else:
-                available_units[category].extend(unit_ids)
+                for unit in unit_ids:
+                    if not unit in available_units[category]: # Filter our duplicities
+                        available_units[category].append(unit)
     output_data = []
     # Extract unit details
     for category in available_units:
