@@ -19,6 +19,7 @@ def generate_dates_between(start, end):
 
     Returns:
         list -- List of dates
+        
     """
     if not isinstance(start, datetime):
         start = datetime.strptime(start, "%Y-%m-%d")
