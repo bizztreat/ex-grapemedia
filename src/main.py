@@ -73,7 +73,7 @@ class Grape:
         if self.session is None:
             self.session = session()
         resp = self.session.post(
-            "http://adx.grapemedia.cz/api/account/login",
+            "https://adx.grapemedia.cz/api/account/login",
             json={
                 "UserName": self.username,
                 "Password": self.password
@@ -116,7 +116,7 @@ class Grape:
             params["dateTo"] = start.strftime("%d.%m.%Y")
 
         resp = self.session.get(
-            "http://adx.grapemedia.cz/api/{}/unit/".format(category),
+            "https://adx.grapemedia.cz/api/{}/unit/".format(category),
             headers=self.headers,
             params=params
         )
@@ -149,7 +149,7 @@ class Grape:
             params["dateTo"] = start.strftime("%d.%m.%Y")
 
         resp = self.session.get(
-            "http://adx.grapemedia.cz/api/{0}/unit/{1}".format(category, unit),
+            "https://adx.grapemedia.cz/api/{0}/unit/{1}".format(category, unit),
             headers=self.headers,
             params=params
         )
